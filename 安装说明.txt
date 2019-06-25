@@ -1,0 +1,29 @@
+虚拟主机用户， Apache构架的配置如下，Nginx的我不知道
+根目录创建一个.htaccess文件，内容如下：
+<IfModule mod_rewrite.c> 
+    RewriteEngine on 
+    RewriteCond %{REQUEST_URI} !^public 
+    RewriteRule ^(.*)$ public/$1 [L] 
+</IfModule> 
+
+如果是VPS用户 直接修改网站运行目录为public即可
+
+修改根目录.env里的数据库连接：
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1	数据库地址
+DB_PORT=3306	数据库端口
+DB_DATABASE=cuteonep	数据库名
+DB_USERNAME=root	数据库账号
+DB_PASSWORD=root	数据库密码
+
+
+
+后台地址是：
+域名/admin/login
+默认账号密码 admin
+
+默认数据库文件是根目录下的install.sql  直接导入到数据库里，临时先这样；
+
+然后还是先添加网盘，更新缓存，设置首页。
+更新缓存点一下就好了，然后刷新页面，如果有缓存量就是正常更新；
+你文件很多，你就多等一会；

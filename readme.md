@@ -19,6 +19,12 @@ CuteOneP是CuteOne的PHP版本，沿用一致的UI风格，保持代码精简 �
 * BCMath PHP 拓展
 
 ## 安装说明
+* 安装依赖文件
+> composer install  
+
+* 虚拟主机用户可以选择下载完整包
+> https://github.com/Hackxiaoya/CuteOneP/releases
+
 * 虚拟主机用户
 > 需开启伪静态，根目录创建一个.htaccess文件，内容如下：  
 ```
